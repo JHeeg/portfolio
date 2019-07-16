@@ -43,7 +43,7 @@ ul.work-wrap {margin-top: 50px;}
 ul.work-wrap li.pf-item {display: inline-block; width: 48%; box-shadow: 0 0 10px rgba(0,0,0,0.2); margin-bottom: 30px;}
 ul.work-wrap li.pf-item:nth-child(even) {margin-left: 2%;}
 ul.work-wrap li.pf-item > figure {position: relative; margin: 0;}
-ul.work-wrap li.pf-item a {display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer; text-indent: -9999px;}
+ul.work-wrap li.pf-item a {display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer; text-indent: -9999px; z-index: 2;}
 ul.work-wrap li.pf-item figcaption.pf-caption {opacity: 0; position: absolute; width: 100%; height: 100%; left: 0; top: 0;}
 ul.work-wrap li.pf-item figcaption.pf-caption::before,
 ul.work-wrap li.pf-item figcaption.pf-caption::after {position: absolute; left: 20px; top: 20px; right: 20px; bottom: 20px; content: '';}
