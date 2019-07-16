@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>조희지 포트폴리오</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <a href="#main" id="skip-nav">본문 바로가기</a>
+        <header id="header">
+            <section class="header-top">
+                <div class="header-top-wrap">
+                    <h1><a href="#">HEEYZ</a></h1>
+                    <nav class="gnb">
+                        <ul>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+            <section class="inner-header">
+                <h2><span>Hello,</span>I'm Heezy</h2>
+            </section>
+        </header>
+        <main id="main">
+            <!-- portfolio -->
+            <section id="portfolio">
+                <h2>PORTFOLIO</h2>
+                <ul class="work-wrap">
+                    <!-- 역순으로 기록하기, 최근 작업이 맨앞으로 -->
+                    <li class="pf-item">
+                        <figure>
+                            <img src="img/portfolio4/thumb.png" alt="portfolio4 - 포트폴리오">
+                            <figcaption class="pf-caption">
+                                <strong class="caption-title">Portfolio</strong>
+                                <span class="caption-desc">포트폴리오 랜딩페이지</span>
+                                <a href="#">포트폴리오 랜딩페이지</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="pf-item">
+                        <figure>
+                            <img src="img/portfolio3/thumb.png" alt="portfolio3 - 관리자페이지">
+                            <figcaption class="pf-caption">
+                                <strong class="caption-title">Admin - dashboard</strong>
+                                <span class="caption-desc">관리자페이지</span>
+                                <a href="https://jheeg.github.io/admin/dashboard.html">관리자페이지</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="pf-item">
+                        <figure>
+                            <img src="img/portfolio2/thumb.png" alt="portfolio2 - 빙그레">
+                            <figcaption class="pf-caption">
+                                <strong class="caption-title">Binggrae</strong>
+                                <span class="caption-desc">빙그레 브랜드 페이지</span>
+                                <a href="https://jheeg.github.io/binggrae/">빙그레 브랜드 페이지</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                    <li class="pf-item">
+                        <figure>
+                            <img src="img/portfolio1/thumb.png" alt="portfolio1 - 에어국제공항(팀프로젝트)">
+                            <figcaption class="pf-caption">
+                                <strong class="caption-title">Air airport</strong>
+                                <span class="caption-desc">에어국제공항(팀프로젝트)</span>
+                                <a href="https://jheeg.github.io/air_airport/index.html">에어국제공항</a>
+                            </figcaption>
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+            <!-- //portfolio -->
+        </main>
+        <div id="contact">skip-contact</div>
+        <footer id="footer">
+            <section class="contacts">
+                <h3>Contacts</h3>
+                <ul>
+                    <li><span>조희지 Cho HeeJi</span></li>
+                    <li><a href="mailTo:heeggggg@gmail.com"><i class="far fa-paper-plane"></i> heeggggg@gmail.com</a></li>
+                    <li><a href="tel:010-7397-3733"> <i class="fas fa-mobile-alt"></i> 010 7397 3733</a></li>
+                    <li><a href="https://github.com/JHeeg/"><i class="fab fa-github"></i> github account</a></li>
+                </ul>
+            </section>
+            <section class="copyright">
+                본 페이지는 상업적 목적이 아닌 개인 포트폴리오 용으로 제작되었습니다.
+            </section>
+        </footer>
+        
+    </div>
+
+    <script>
+        'use strict';
+
+        // header
+        setScrollUI();
+        $(window).on('scroll', function() {
+            setScrollUI();
+        });
+            
+        function setScrollUI() {
+            var scrollTop = $(document).scrollTop();
+            if (scrollTop > 100) {
+                $('#header section.header-top').addClass('on');
+            } else {
+                $('#header section.header-top').removeClass('on');
+            }
+        }    
+    </script>
+</body>
+</html>
