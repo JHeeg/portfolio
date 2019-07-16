@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>조희지 포트폴리오</title>
+    <!-- css -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <!-- javascript -->
     <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/scrolloverflow.min.js"></script>
+    <script src="js/common_ui.js"></script>
 </head>
 <body>
     <div id="wrap">
+        <!-- skip-main -->
         <a href="#main" id="skip-nav">본문 바로가기</a>
+        <!-- header -->
         <header id="header">
             <section class="header-top">
                 <div class="header-top-wrap">
@@ -27,9 +32,17 @@
                 </div>
             </section>
             <section class="inner-header">
-                <h2><span>Hello,</span>I'm Heezy</h2>
+                <h2 class="textAni">Hello,I'm Heezy</h2>
             </section>
+            <!-- scroll down -->
+            <div class="container">
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <div class="chevron"></div>
+                <span class="text">Scroll down</span>
+            </div>
         </header>
+        <!-- main -->
         <main id="main">
             <!-- portfolio -->
             <section id="portfolio">
@@ -78,10 +91,10 @@
                     </li>
                 </ul>
             </section>
-            <!-- //portfolio -->
         </main>
-        <div id="contact">skip-contact</div>
+        <!-- footer -->
         <footer id="footer">
+            <!-- contact -->
             <section class="contacts">
                 <h3>Contacts</h3>
                 <ul>
@@ -95,26 +108,19 @@
                 본 페이지는 상업적 목적이 아닌 개인 포트폴리오 용으로 제작되었습니다.
             </section>
         </footer>
-        
+        <div id="contact">skip-contact</div>
     </div>
 
     <script>
         'use strict';
 
-        // header
         setScrollUI();
         $(window).on('scroll', function() {
             setScrollUI();
         });
-            
-        function setScrollUI() {
-            var scrollTop = $(document).scrollTop();
-            if (scrollTop > 100) {
-                $('#header section.header-top').addClass('on');
-            } else {
-                $('#header section.header-top').removeClass('on');
-            }
-        }    
+
+        setTextAnimation('h2.textAni', 'fly-in');
+
     </script>
 </body>
 </html>
