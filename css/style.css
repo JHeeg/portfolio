@@ -14,6 +14,7 @@
 body {font-family: 'Noto Sans', 'Noto Sans KR'; font-size: 16px; color: #555;}
 section {width: 70%; max-width: 1200px; margin: 0 auto;}
 header, main, footer, section {box-sizing: border-box;}
+span.highlight {background-color: rgba(156, 216, 99, 0.473);/*  text-decoration: underline; */}
 
 /* header */
 #header {width: 100%; background-color: #e6b2be;}
@@ -66,10 +67,11 @@ div.layer-wrap {position: relative; width: 900px; margin: 30px auto; background:
 div.layer-title {position: relative; height: 50px; background-color: #555; color: #fff;}
 div.layer-title h3 {position: absolute; left: 20px; top: 50%; transform: translate(0, -50%);}
 div.layer-title a.close {position: absolute; right: 20px; top: 50%; transform: translate(0, -50%);}
-div.layer-cont {width: 100%; height: 300px; border-bottom: 1px solid #e4e4e4;}
+div.layer-cont {width: 100%; height: auto; border-bottom: 1px solid #e4e4e4;}
 div.layer-desc, ul.btn-wrap {padding: 20px;}
 div.layer-desc > strong {display: block; font-size: 20px;}
 div.layer-desc span.period {display: block; margin: 10px 0; color: #000;}
+ul.btn-wrap {height: 50px;}
 ul.btn-wrap li {display: inline-block;}
 ul.btn-wrap li + li {margin-left: 20px;}
 ul.btn-wrap li a {display: block; padding: 10px 20px; border: 1px dotted #222; background: #f7f7f7;}
