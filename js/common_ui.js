@@ -1,3 +1,8 @@
+// JavaScript Document
+$(document).on('click', 'a[href="#"]', function(e) {
+    e.preventDefault();
+});
+
 // scroll (header, scroll down CSS)
 function setScrollUI() {
     var scrollTop = $(document).scrollTop();
@@ -10,6 +15,7 @@ function setScrollUI() {
         $('.container').css({'display': 'block'});
     }
 }
+
 // text animation
 function setTextAnimation(selector, className) {
     var text = $(selector).text();
@@ -31,3 +37,29 @@ function setTextAnimation(selector, className) {
         setTimeout(function() {$(selector).find('span:eq(' + i + ')').addClass(effectType);}, (i * 80));
     });
 }
+
+function openLayerPopup(selector, returnElement) {
+    // 필요요소 추가 및 창 표시
+    $(selector).prepend('<div id="layer-mask" tabindex="0"></div>').append('<a href="#" class="return"></a>').attr({'tabIndex': 0}).css({'display': 'block'});
+    
+    //포커스 이동 및 차단
+    $(selector).trigger('focus');
+    $(selector).find('a.return').on('focus', function() {
+        $(selector).trigger('focus');
+    });
+    $('body').css({'overflow': 'hidden'});  // 본문 스크롤 차단
+    
+    // 창닫기
+    $('#layer-mask').on('click', function() {
+        $(selector).find('a.close').trigger('click')
+    });
+    $(selector).find('a.close').one('click', function() {
+        $(returnElement).trigger('focus');
+        $('#layer-mask').remove();
+        $(selector).find('a.return').remove();
+        $(selector).removeAttr('tabIndex').css({'display': 'none'});
+        $('body').css({'overflow': 'initial'});  // 본문 스크롤 초기화
+    });
+}
+
+
