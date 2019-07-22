@@ -2,24 +2,24 @@
 
 /* 
  * ============ color ============ *
-    bg 인디핑크 : #e6b2be
+    bg 인디핑크 : #41d26b
     bg 화이트그레이 : #f0eff0
-    font 그레이 : #555
+    font 그레이 : #333
     font 화이트그레이 : #f0eff0
     font hover : #000 , #e6b2be
  * =============================== *
 */
 
 /* common */
-body {font-family: 'Noto Sans', 'Noto Sans KR'; font-size: 16px; color: #555;}
+body {font-family: 'Noto Sans', 'Noto Sans KR'; font-size: 16px; color: #333;}
 section {width: 70%; max-width: 1200px; margin: 0 auto;}
 header, main, footer, section {box-sizing: border-box;}
-span.highlight {background-color: rgba(156, 216, 99, 0.473);/*  text-decoration: underline; */}
+span.highlight {background-color: #1ee13bef;/*  text-decoration: underline; */}
 
 /* header */
-#header {width: 100%; background-color: #e6b2be;}
+#header {width: 100%; background-color: #41d26b;}
 section.header-top {position: fixed; width: 100%; max-width: 100%; height: 100px; left: 0; top: 0; z-index: 10;}
-section.header-top.on {background-color: rgba(255, 255, 255, 0.5);}
+section.header-top.on {background-color: rgba(255, 255, 255, 0.8);}
 section.header-top div.header-top-wrap {position: relative; left: 50%; top: 0; transform: translate(-50%, 0); width: 1200px; height: 100%;}
 section.header-top h1 {position: absolute; left: 20px; top: 50%; transform: translate(0, -50%);}
 section.header-top nav.gnb {position: absolute; right: 20px; top: 50%; transform: translate(0, -50%); overflow: hidden;}
@@ -64,7 +64,7 @@ li.pf-item figcaption.pf-caption span.caption-desc {top: 52%; font-size: 22px;}
 #layer-mask {position: fixed; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5);}
 div.layer-popup {position: fixed; left: 0; top: 0; right: 0; bottom: 0; outline: none; box-sizing: border-box; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); z-index: 11; overflow: auto; display: none;}
 div.layer-wrap {position: relative; width: 900px; margin: 30px auto; background: #ffffff;}
-div.layer-title {position: relative; height: 50px; background-color: #555; color: #fff;}
+div.layer-title {position: relative; height: 50px; background-color: #333; color: #fff;}
 div.layer-title h3 {position: absolute; left: 20px; top: 50%; transform: translate(0, -50%);}
 div.layer-title a.close {position: absolute; right: 20px; top: 50%; transform: translate(0, -50%);}
 div.layer-cont {width: 100%; height: auto; border-bottom: 1px solid #e4e4e4;}
@@ -78,11 +78,11 @@ ul.btn-wrap li a {display: block; padding: 10px 20px; border: 1px dotted #222; b
 ul.btn-wrap li a:hover {background: rgba(0,0,0,0.7); color: #fff;}
 
 /* footer */
-#footer {position: fixed; width: 100%; height: 300px; left: 0; bottom: 0; background-color: #555; color: #fff; z-index: -1;}
+#footer {position: fixed; width: 100%; height: 300px; left: 0; bottom: 0; background-color: #333; color: #fff; z-index: -1;}
 #footer section.contacts {line-height: 1.8; padding: 50px 20px;}
 #footer section.contacts h3 {margin-bottom: 10px;}
 #footer section.contacts ul li:first-child {margin-bottom: 10px;}
-#footer section.contacts ul li a:hover {text-decoration: underline; color: #e6b2be; z-index: -1;}
+#footer section.contacts ul li a:hover {text-decoration: underline; color: #41d26b; z-index: -1;}
 #footer section.contacts i {margin-right: 10px;}
 #footer section.contacts i.fa-mobile-alt {padding-left: 3px; padding-right: 3px; }
 #footer section.copyright {position: absolute; left: 50%; bottom: 30px; transform: translate(-50%, 0); text-align: center; font-size: 14px; font-weight: 100;}
