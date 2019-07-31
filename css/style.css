@@ -1,8 +1,9 @@
+@charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR|Noto+Sans|Bad+Script|Bungee|Bungee+Hairline|Bungee+Shade|Megrim&display=swap');
 
 /* 
  * ============ color ============ *
-    bg 인디핑크 : #41d26b
+    bg 형광초록 : #41d26b
     bg 화이트그레이 : #f0eff0
     font 그레이 : #333
     font 화이트그레이 : #f0eff0
@@ -14,7 +15,7 @@
 body {font-family: 'Noto Sans', 'Noto Sans KR'; font-size: 16px; color: #333;}
 section {width: 70%; max-width: 1200px; margin: 0 auto;}
 header, main, footer, section {box-sizing: border-box;}
-span.highlight {background-color: #1ee13bef;/*  text-decoration: underline; */}
+span.highlight {background-color: #1ee13bef;}
 
 /* header */
 #header {width: 100%; background-color: #41d26b;}
@@ -26,7 +27,6 @@ section.header-top nav.gnb {position: absolute; right: 20px; top: 50%; transform
 section.header-top nav.gnb ul li {float: left; font-size: 20px;}
 section.header-top nav.gnb ul li + li {margin-left: 40px;}
 section.header-top nav.gnb a:hover {cursor: pointer; color: #000;}
-
 section.inner-header {position: relative; height: 100vh;}
 section.inner-header h2 {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-family: 'Bad Script', 'Noto Sans'; font-size: 150px; color: #f0eff0; line-height: 170px; text-align: center;}
 section.inner-header h2.textAni span {display: inline-block; opacity: 0;}
@@ -41,9 +41,14 @@ section.inner-header h2.textAni span.fly-in {animation: fly-in 0.8s ease-out 0s 
 #main {width: 100%; margin-bottom: 300px; background-color: #f0eff0;}
 #main section {padding: 50px 20px;}
 ul.work-wrap {margin-top: 50px;}
-ul.work-wrap li.pf-item {display: inline-block; width: 48%; box-shadow: 0 0 10px rgba(0,0,0,0.2); margin-bottom: 30px;}
+ul.work-wrap li.pf-item {display: inline-block; width: 48%; box-shadow: 0 0 10px rgba(0,0,0,0.2); margin-bottom: 30px; opacity: 0; transform: translate(0, 70px);}
+
+ul.work-wrap li.pf-item.show {opacity: 1; transform: translate(0, 0); transition: all 0.5s ease-out;}
+
+
 ul.work-wrap li.pf-item:nth-child(even) {margin-left: 2%;}
 ul.work-wrap li.pf-item > figure {position: relative; margin: 0;}
+
 ul.work-wrap li.pf-item a {display: block; position: absolute; left: 0; top: 0; width: 100%; height: 100%; cursor: pointer; text-indent: -9999px; z-index: 2;}
 ul.work-wrap li.pf-item figcaption.pf-caption {opacity: 0; position: absolute; width: 100%; height: 100%; left: 0; top: 0;}
 ul.work-wrap li.pf-item figcaption.pf-caption::before,
